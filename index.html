@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Rounded:wght@400;700&family=Nunito:wght@400;700&family=Quicksand:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Vitor's Website</title>
+    </head>
+    <body>
+        <div id="aboutMe" class="section">
+            <h2>About Me</h2>
+            <p>
+                I find the technology world intriguing. I'm fascinatwd when I use
+                <br>technology such as my phone, when I play videogames, when I 
+                <br>hear about a new AI model an what it can do. It was only a matter
+                <br>of time until I started making technology.
+                <br><br>Over the last 4 years I have build multiple projects using Java,
+                <br>SQL, HTML, JavaScript, etc. I have used my coding knowledge in
+                <br>multiple competitions, in and out of school. Coding websites and apps 
+                <br>is a passion of mine. I enjoy building real-world solutions that make
+                <br>someones's life easier and love seeing my work come to life.
+                <br><br>Being creative is something I value deeplu. And while creativity
+                <br>has always come naturally to me, I strive to push new boundaries
+                <br>with my projects each and every time. Whether in my work life or
+                <br>socioal life, I am always striving to grow as a person while keeping
+                <br>true to myself. I am a strong Individual contributor, but I also excel
+                <br>in team-based environments where collaboration and different
+                <br>perspectives can drive innovation. My ultimate goal as I persue
+                <br>my career is to use my passion for technology and creativity to
+                <br>contribute meaningfully to the world around me.
+            </p>
+        </div>
+        <div id="projects" class="section">
+            <h2>Projects</h2>
+        </div>
+        <div id="achievements" class="section">
+            <h2>Achievements</h2>
+        </div>
+
+        <div class="rectangle"></div>
+        <div class="rectangle2"></div>
+        <div class="rectangle3"></div>
+    
+        <div class="rectangle5"></div>
+        <div class="rectangle6"></div>
+
+        <h1 class="screen1-mainTitle">Hello, I am Vitor!</h1>
+        <h1 class="screen1-subTitle">-I'm a
+            <span id="changing-text">Software Developer</span>
+        </h1>
+        <img src="images/websiteImage1.jpg" class="screen1-image" width="430" height="570">
+        <img src="images/websiteImage9.png" class="screen2-image" width = "430" height = "570">
+
+        <script>
+            const phrases = ["Aspiring Software Developer", "Aspiring Engineer", "Student"];
+            let currentIndex = 0;
+
+            function changeText(){
+                const textElement = document.getElementById('changing-text');
+                textElement.innerText = phrases[currentIndex];
+                currentIndex = (currentIndex +1) % phrases.length;
+            }
+            
+            setInterval(changeText, 4000);
+        </script>
+        
+    </body>
+</html>
