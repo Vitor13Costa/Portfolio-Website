@@ -35,7 +35,7 @@ body{
     width: 1263px;
     height: 100px;
     background-color: #04b876;
-    top: 2030px;
+    top: 1455px;
     z-index: 1;
 
 }
@@ -44,7 +44,27 @@ body{
     width: 1263px;
     height: 100px;
     background-color: #04b876;
-    top: 1535px;
+    top: 2260px;
+    z-index: 1;
+
+}
+.rectangle7{
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    background-color: #04b876;
+    top: 1150px;
+    left: 200px;
+    z-index: 1;
+
+}
+.rectangle8{
+    position: absolute;
+    width: 1263px;
+    height: 200px;
+    background-color: #04b876;
+    top: 3000px;
+    left: 0px;
     z-index: 1;
 
 }
@@ -98,6 +118,32 @@ body{
     z-index: 2;
     border: 1px solid white;
 }
+/*Add background color */
+.topnav {
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 50;
+}
+/*Style links inside the navigation bar*/
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+/*Change the color of links on hover*/
+.topnav a:hover{
+    background-color: #ddd;
+    color: black;
+}
+/*Add a color to the active/current link*/
+.topnav a.active{
+    background-color: #04b876;
+    color: white;
+}
 #aboutMe{
     position: absolute;
     top: 670px;
@@ -114,12 +160,13 @@ body{
 #aboutMe p{
     font-size: 20px;
     font-family: 'Arial', sans-serif;
+    font-weight: bold;
     color: black;
 }
 #projects{
     position: absolute;
-    top: 1500px;
-    left: 500px;
+    top: 1420px;
+    left: 515px;
     z-index: 2;
 
 
@@ -133,7 +180,7 @@ body{
 
 #achievements{
     position: absolute;
-    top: 1995px;
+    top: 2225px;
     left: 430px;
     z-index: 2;
 }
@@ -143,6 +190,173 @@ body{
     font-family: 'Arial', sans-serif;
     font-weight: bold;
     color: white;
+}
+/*Keyframes for square circuit around second image*/
+@keyframes example{
+    0%{background-color: red; left: 70px; top: 740px;}
+    25% {background-color: yellow; left: 520px; top: 740px}
+    50% {background-color: blue; left: 520px; top: 1330px;}
+    75% {background-color: green; left: 70px; top: 1330px;}
+    100% {background-color: red; left: 70px; top: 740px;}
+}
+
+.carousel-wrapper-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    margin-top: 2330px; /* existing top offset for the first carousel */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: 110px;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.carousel-item {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.image-description {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Navigation buttons (shared by both carousels) */
+.prev, .next {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.prev:disabled, .next:disabled {
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.carousel-wrapper-container2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    top: 1575px; 
+}
+
+.carousel-container2 {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: 110px;
+    overflow: hidden;
+}
+
+.carousel-wrapper2 {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-image2 {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.carousel-item2 {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.image2-description {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+    position: absolute;
+    top:2120px;
+    left: 200px;
+  background-color: white;
+  color: black;
+  border: 2px solid #04AA6D;
+}
+
+.button1:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+.button2 {
+    position: absolute;
+    top:2160px;
+    left: 550px;
+  background-color: white;
+  color: black;
+  border: 2px solid #04AA6D;
+}
+
+.button2:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.button3 {
+    position: absolute;
+    top:2100px;
+    left: 900px;
+  background-color: white;
+  color: black;
+  border: 2px solid #04AA6D;
+}
+
+.button3:hover {
+  background-color: #04AA6D;
+  color: white;
 }
 
 
