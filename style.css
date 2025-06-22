@@ -29,7 +29,18 @@ body{
     top: 700px;
     z-index: 1;
 }
-
+.rectangle4{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    top: 700px;
+    left: 70px;
+    z-index: 4;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
 .rectangle5{
     position: absolute;
     width: 1263px;
@@ -239,8 +250,8 @@ body{
     margin-top: 10px;
 }
 
-/* Navigation buttons (shared by both carousels) */
-.prev, .next {
+/* Navigation buttons*/
+.prev1, .next1 {
     position: absolute;
     top: 30%;
     transform: translateY(-50%);
@@ -253,17 +264,42 @@ body{
     z-index: 1000;
 }
 
-.prev { left: 0; }
-.next { right: 0; }
+.prev1 { left: 0; }
+.next1 { right: 0; }
 
-.prev:disabled, .next:disabled {
+.prev1:disabled, .next1:disabled {
     background-color: rgba(0, 0, 0, 0.3);
     cursor: not-allowed;
 }
 
-.prev:hover, .next:hover {
+.prev1:hover, .next1:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+.prev2, .next2 {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.prev2 { left: 0; }
+.next2 { right: 0; }
+
+.prev2:disabled, .next2:disabled {
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+}
+
+.prev2:hover, .next2:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 
 
 .carousel-wrapper-container2 {

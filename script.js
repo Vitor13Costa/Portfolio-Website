@@ -1,27 +1,29 @@
 let currentIndex1 = 0;
 const images1 = document.querySelectorAll('.carousel-image');
-const images = DocumentFragment.querySelectorAll('.carousel-wrappper');
-const prevButton1 = document.querySelector('.prev');
-const nextButton1 = document.querySelector('.next');
+const totalImages1 = images1.length;
+const carouselWrapper1 = document.querySelector('.carousel-wrapper');
+const prevButton1 = document.querySelector('.prev1');
+const nextButton1 = document.querySelector('.next1');
+
 
 const slideshowImages1 = {
-    'carousel-image-1': ['websiteImage3.jpg', 'websiteImage7.jpg'],
-    'carousel-image-2': ['websiteImage5.png', 'websiteImage6.png'],
+    'carousel-image-1': ['images/websiteImage3.jpg', 'images/websiteImage7.jpg'],
+    'carousel-image-2': ['images/websiteImage5.png', 'images/websiteImage6.png'],
 
-    'carousel-image-4': ['websiteImage15.jpg', 'websiteImage12.jpg', 'websiteImage13.jpg', 'websiteImage14.jpg'],
-    'carousel-image5': ['websiteImage16.jpg', 'websiteImage17.jpg']
+    'carousel-image-4': ['images/websiteImage15.jpg', 'images/websiteImage12.jpg', 'images/websiteImage13.jpg', 'images/websiteImage14.jpg'],
+    'carousel-image-5': ['images/websiteImage16.jpg', 'images/websiteImage17.jpg']
 }
 
-// Assign a unique interval (ms) for each carousel‐1 slide (by its <img id>)
+
 const slideIntervals1 = {
-    'carousel-image-1': 5000,   // changes every 5 sec
-    'carousel-image-2': 8000,   // changes every 8 sec
-    'carousel-image-3': 6000,   // changes every 6 sec
-    'carousel-image-4': 7000,   // changes every 7 sec
-    'carousel-image-5': 9000    // changes every 9 sec (if present)
+    'carousel-image-1': 5000,   
+    'carousel-image-2': 8000,   
+    'carousel-image-3': 6000,   
+    'carousel-image-4': 7000,   
+    'carousel-image-5': 9000    
 };
 
-// Function to start the slideshow for Carousel 1
+
 function changeImage1(slideId, interval) {
     const imgEl = document.getElementById(slideId);
     const arr = slideshowImages1[slideId];
@@ -33,7 +35,7 @@ function changeImage1(slideId, interval) {
     }, interval);
 }
 
-// Initialize all slideshows in Carousel 1
+
 for (const slideId in slideshowImages1) {
     const interval = slideIntervals1[slideId];
     changeImage1(slideId, interval);
@@ -41,9 +43,9 @@ for (const slideId in slideshowImages1) {
 
 // Navigation for Carousel 1
 function moveSlide1(step) {
-    // Prevent overshooting on left or right
+
     if (currentIndex1 === 0 && step === -1) return;
-    if (currentIndex1 === totalImages1 - 3 && step === 1) return; // assume 3 visible at once
+    if (currentIndex1 === totalImages1 - 3 && step === 1) return; 
 
     currentIndex1 = (currentIndex1 + step + totalImages1) % totalImages1;
     carouselWrapper1.style.transform = `translateX(-${currentIndex1 * (300 + 30)}px)`;
@@ -52,29 +54,29 @@ function moveSlide1(step) {
     nextButton1.disabled = (currentIndex1 === totalImages1 - 3);
 }
 
-// Wire up the buttons for Carousel 1
+
 prevButton1.addEventListener('click', () => moveSlide1(-1));
 nextButton1.addEventListener('click', () => moveSlide1(1));
 
-// On page load, ensure the first image is visible and buttons are correct:
 moveSlide1(0);
 
 
 
 let currentIndex2 = 0;
-const images2 = document.querySelectorAll('.carousel-image2');            // All <img> elements in Carousel 2
+const images2 = document.querySelectorAll('.carousel-image2');
 const totalImages2 = images2.length;
-const carouselWrapper2 = document.querySelector('.carousel-wrapper2');     // The flex container for Carousel 2
+const carouselWrapper2 = document.querySelector('.carousel-wrapper2');    
+const prevButton2 = document.querySelector('.prev2');
+const nextButton2 = document.querySelector('.next2');
 
 const slideshowImages2 = {
-    'carousel-image2-1': ['websiteImage3.jpg', 'websiteImage7.jpg'],
-    'carousel-image2-2': ['websiteImage5.png', 'websiteImage6.png'],
-    'carousel-image2-3': ['websiteImage10.jpg', 'websiteImage11.jpg'],
-    'carousel-image2-4': ['websiteImage15.jpg', 'websiteImage12.jpg', 'websiteImage13.jpg', 'websiteImage14.jpg'],
-    'carousel-image2-5': ['websiteImage16.jpg', 'websiteImage17.jpg']
+    'carousel-image2-1': ['images/websiteImage3.jpg', 'images/websiteImage7.jpg'],
+    'carousel-image2-2': ['images/websiteImage5.png', 'images/websiteImage6.png'],
+    'carousel-image2-3': ['images/websiteImage10.jpg', 'images/websiteImage11.jpg'],
+    'carousel-image2-4': ['images/websiteImage15.jpg', 'images/websiteImage12.jpg', 'images/websiteImage13.jpg', 'images/websiteImage14.jpg'],
+    'carousel-image2-5': ['images/websiteImage16.jpg', 'images/websiteImage17.jpg']
 };
 
-// Unique intervals for each slide in Carousel 2 (ms)
 const slideIntervals2 = {
     'carousel-image2-1': 4000,   // 4 sec
     'carousel-image2-2': 7000,   // 7 sec
@@ -83,7 +85,6 @@ const slideIntervals2 = {
     'carousel-image2-5': 6000    // 6 sec
 };
 
-// Function to start the slideshow for Carousel 2
 function changeImage2(slideId, interval) {
     const imgEl = document.getElementById(slideId);
     const arr = slideshowImages2[slideId];
@@ -95,30 +96,24 @@ function changeImage2(slideId, interval) {
     }, interval);
 }
 
-// Initialize all slideshows in Carousel 2
 for (const slideId in slideshowImages2) {
     const interval = slideIntervals2[slideId];
     changeImage2(slideId, interval);
 }
 
-// Navigation for Carousel 2
 function moveSlide2(step) {
-    // Prevent overshooting on left or right
     if (currentIndex2 === 0 && step === -1) return;
     if (currentIndex2 === totalImages2 - 3 && step === 1) return; // assume 3 visible
 
     currentIndex2 = (currentIndex2 + step + totalImages2) % totalImages2;
     carouselWrapper2.style.transform = `translateX(-${currentIndex2 * (300 + 30)}px)`;
 
-    // We must reference the same buttons (.prev / .next)
-    prevButton1.disabled = (currentIndex2 === 0);
-    nextButton1.disabled = (currentIndex2 === totalImages2 - 3);
+    prevButton2.disabled = (currentIndex2 === 0);
+    nextButton2.disabled = (currentIndex2 === totalImages2 - 3);
 }
 
-// Wire up the same Prev/Next buttons to Carousel 2 as well
-// (Note: they share .prev / .next in the HTML, so clicking either arrow affects whichever carousel is currently in front)
-prevButton1.addEventListener('click', () => moveSlide2(-1));
-nextButton1.addEventListener('click', () => moveSlide2(1));
 
-// On page load, ensure the first image in Carousel 2 is visible
+prevButton2.addEventListener('click', () => moveSlide2(-1));
+nextButton2.addEventListener('click', () => moveSlide2(1));
+
 moveSlide2(0);
