@@ -1,26 +1,26 @@
 let currentIndex1 = 0;
 const images1 = document.querySelectorAll('.carousel-image');
-const totalImages1 = images1.length;
+const totalImages1 = images1.length +5;
 const carouselWrapper1 = document.querySelector('.carousel-wrapper');
 const prevButton1 = document.querySelector('.prev1');
 const nextButton1 = document.querySelector('.next1');
 
 
 const slideshowImages1 = {
-    'carousel-image-1': ['images/websiteImage3.jpg', 'images/websiteImage7.jpg'],
-    'carousel-image-2': ['images/websiteImage5.png', 'images/websiteImage6.png'],
+    'carousel-image-1': ['images/websiteImage19.png', 'images/websiteImage20.png'],
+    'carousel-image-2': ['images/websiteImage25.png', 'images/websiteImage26.png'],
 
-    'carousel-image-4': ['images/websiteImage15.jpg', 'images/websiteImage12.jpg', 'images/websiteImage13.jpg', 'images/websiteImage14.jpg'],
+    'carousel-image-4': ['images/websiteImage21.png', 'images/websiteImage22.png', 'images/websiteImage23.png', 'images/websiteImage24.png'],
     'carousel-image-5': ['images/websiteImage16.jpg', 'images/websiteImage17.jpg']
 }
 
 
 const slideIntervals1 = {
     'carousel-image-1': 5000,   
-    'carousel-image-2': 8000,   
-    'carousel-image-3': 6000,   
-    'carousel-image-4': 7000,   
-    'carousel-image-5': 9000    
+    'carousel-image-2': 5000,   
+    'carousel-image-3': 5000,   
+    'carousel-image-4': 5000,   
+    'carousel-image-5': 5000    
 };
 
 
@@ -48,10 +48,10 @@ function moveSlide1(step) {
     if (currentIndex1 === totalImages1 - 3 && step === 1) return; 
 
     currentIndex1 = (currentIndex1 + step + totalImages1) % totalImages1;
-    carouselWrapper1.style.transform = `translateX(-${currentIndex1 * (300 + 30)}px)`;
+    carouselWrapper1.style.transform = `translateX(-${currentIndex1 * (600+25)}px)`;
 
     prevButton1.disabled = (currentIndex1 === 0);
-    nextButton1.disabled = (currentIndex1 === totalImages1 - 3);
+    nextButton1.disabled = (currentIndex1 === totalImages1 + 3);
 }
 
 

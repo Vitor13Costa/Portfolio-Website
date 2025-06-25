@@ -215,15 +215,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 90%;
-    margin-top: 2330px; /* existing top offset for the first carousel */
+    width: 100%;
+    margin-top: 2330px; 
 }
 
 .carousel-container {
     position: relative;
     width: 100%;
     max-width: 1200px;
-    margin-left: 110px;
+    margin-left: 0px;
     overflow: hidden;
 }
 
@@ -233,8 +233,8 @@ body{
 }
 
 .carousel-image {
-    width: 300px;
-    height: 300px;
+    width: 1200px;
+    height: 500px;
     object-fit: cover;
     margin-right: 30px;
 }
