@@ -13,7 +13,7 @@ const next1    = document.querySelector('.next1');
 
 const slideshowImages1 = {
   'carousel-image-1': ['images/websiteImage19.png', 'images/websiteImage20.png'],
-  'carousel-image-2': ['images/websiteImage25.png', 'images/websiteImage26.png'],
+  'carousel-image-2': ['images/websiteImage25.png','images/websiteImage26.png'],
   'carousel-image-4': [
     'images/websiteImage21.png',
     'images/websiteImage22.png',
@@ -91,7 +91,6 @@ const nextButton2 = document.querySelector('.next2');
 const slideshowImages2 = {
     'carousel-image2-1': ['images/websiteImage28.png', 'images/websiteImage29.jpeg', 'images/websiteImage31.png'],
     'carousel-image2-2': ['images/websiteImage5.png', 'images/websiteImage6.png'],
-    'carousel-image2-3': ['images/websiteImage10.jpg', 'images/websiteImage11.jpg'],
     'carousel-image2-4': ['images/websiteImage15.jpg', 'images/websiteImage12.jpg', 'images/websiteImage13.jpg', 'images/websiteImage14.jpg'],
     'carousel-image2-5': ['images/websiteImage16.jpg', 'images/websiteImage17.jpg']
 };
@@ -100,7 +99,7 @@ const slideIntervals2 = {
     'carousel-image2-1': 4000,   // 4 sec
     'carousel-image2-2': 7000,   // 7 sec
     'carousel-image2-3': 5000,   // 5 sec
-    'carousel-image2-4': 8000,   // 8 sec
+    'carousel-image2-4': 6000,   // 8 sec
     'carousel-image2-5': 6000    // 6 sec
 };
 

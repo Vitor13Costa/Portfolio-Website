@@ -183,7 +183,7 @@ body{
 #projects{
     position: absolute;
     top: 1412px;
-    left: 515px;
+    left: 270px;
     z-index: 2;
 
 
@@ -399,7 +399,7 @@ body{
 
 .button3 {
     position: absolute;
-    top:2100px;
+    top:2150px;
     left: 900px;
   background-color: white;
   color: black;
