@@ -1,5 +1,5 @@
 const MANUAL_SHIFT_1  = 625;
-const TOTAL_SLIDES_1  = 9;
+const TOTAL_SLIDES_1  = 7;
 const AUTO_SHIFT_1    = 1250;
 const AUTO_INTERVAL_1 = 13000;
 
