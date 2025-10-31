@@ -207,6 +207,18 @@ body{
     color: white;
 }
 
+#credit{
+    position: absolute;
+    top: 420px;
+    left: 85px;
+    z-index: 5;
+}
+#credit h2{
+    font-size: 19px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: white;
+}
 #achievements{
     position: absolute;
     top: 2278px;
